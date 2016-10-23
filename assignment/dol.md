@@ -18,5 +18,6 @@
 然后执行语句cd/build/bin/main，进入到编译目录，执行语句“ant -f runexample.xml -Dnumber=1”
 7. 编译成功就可以看到如图所示：
 ![](http://a1.qpic.cn/psb?/V11g2aQW16thea/udtiBp8cilSDkTkqEC0YMje3GJBqiS*7ZNUuLIWs2jY!/b/dHcBAAAAAAAA&bo=0AICAgAAAAADB*A!&rf=viewer_4)
+
 ## 实验感想
 这次的实验操作比较简单，但是原理方面一开始了解的不是很清晰，只是按照要求执行语句跟修改代码。之后了解到每一个example里面，有src文件夹和一个该example的xml文件。在src文件里面，是生产者、消费者、处理模块等进程的功能的定义。xml文件是系统架构模块连接方式定义。src文件夹内包含2种文件.c和.h也就是实现的模块，就是.dot的框框的功能描述。（每个模块要实现 2个接口，xxx_init和xxx_fire两个函数， 分别是初始化这个模块做了什么，和这个模块运行的时候会做什么）。在example*.xml文件里定义了模块与模块之间是怎么连接的。在这个文件中，process就是dot图中的框，sw_channel线，connection是连接框和线
