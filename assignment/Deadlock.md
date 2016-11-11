@@ -18,7 +18,7 @@
 	synchronized void last(){
 		System.out.println("Inside A.last()");
 	}
-   }
+   	}
    
     	class B{
 		synchronized void methodB(A a){
