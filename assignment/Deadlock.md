@@ -10,6 +10,7 @@
 3. 非抢占：进程已获得的资源，在末使用完之前，不能强行剥夺。
 4. 循环等待：若干进程之间形成一种头尾相接的循环等待资源关系。
 ##这个程序产生死锁的原因
+    
     class A{
     	synchronized void methodA(B b){
 		b.last();
@@ -17,15 +18,16 @@
 	synchronized void last(){
 		System.out.println("Inside A.last()");
 	}
-    }
-    class B{
-	synchronized void methodB(A a){
-		a.last();
-	}
-	synchronized void last(){
-		System.out.println("Inside B.last()");
-	}
-    }
+   }
+   
+    	class B{
+		synchronized void methodB(A a){
+			a.last();
+		}
+		synchronized void last(){
+			System.out.println("Inside B.last()");
+		}
+    	}
 
 		class Deadlock implements Runnable{
 		A a=new A();
