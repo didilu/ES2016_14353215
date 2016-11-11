@@ -18,7 +18,7 @@
 		synchronized void last(){
 			System.out.println("Inside A.last()");
 		}
-   	}
+   		}
    
     	class B{
 		synchronized void methodB(A a){
@@ -27,9 +27,9 @@
 		synchronized void last(){
 			System.out.println("Inside B.last()");
 		}
-    	}
+    		}
 
-	class Deadlock implements Runnable{
+		class Deadlock implements Runnable{
 		A a=new A();
 		B b=new B();
 
@@ -48,7 +48,7 @@
 		public static void main(String args[]){
 			new Deadlock();
 		}
-	}
+		}
 
 1.当调用java Deadlock的时候，因为Runnable一运行就会调用run()函数，所以会调用b.method(A)，此时线程1访问的是 B的一个synchronized同步代码块，会得到B的对象锁;
 
