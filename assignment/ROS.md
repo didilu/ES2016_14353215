@@ -36,3 +36,16 @@ rosinstall是ROS经常用到的命令行工具，通过一个命令就可以下�
 ##9. 获取安装包的源代码
 `$ apt-get source ros-jade-laser-pipeline`<br>
 但是这里必须指定一个单一的、确切的包名
+##10. 验证ROS安装成功
+在终端进行以下操作：<br>
+打开第一个终端，输入命令 `roscore`<br>
+打开第二个终端，输入命令 `rosrun turtlesim turtlesim_node`<br>
+可以看到出现一个图画：<br>
+![picture1](http://a2.qpic.cn/psb?/V11g2aQW16thea/KxB8sGa8M1VY8LnXZOmypHTzj1*uL9bNXA8LLM0cHsg!/b/dAwBAAAAAAAA&bo=gQCWAAAAAAADADI!&rf=viewer_4)<br>
+打开第三个终端，输入命令 `rosrun turtlesim turtle_teleop_key`<br>
+对图画中的小动物进行操作，可以看到小动物可以转向和运动：<br>
+![picture2](http://a2.qpic.cn/psb?/V11g2aQW16thea/j8MaHPemmQ9bet6erlxm7bOKPw1*E5ybMX9OY201.to!/b/dNwAAAAAAAAA&bo=ggBsAAAAAAADAMs!&rf=viewer_4)<br>
+打开第四个终端，输入命令 `rosrun rqt_graph rqt_graph`<br>
+可以看到一个rqt的图像：<br>
+![picture3](http://a3.qpic.cn/psb?/V11g2aQW16thea/kWQxFDhBp9zIQQoj2vZwZXzgFEdOhBjl*6kv*ko9MAM!/b/dGcBAAAAAAAA&bo=PQOJAQAAAAADB5Q!&rf=viewer_40)<br>
+这里注意要在不同终端进行输入。
